@@ -1,0 +1,35 @@
+h1 {
+    text-align: center;
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    padding: 10px 0px;
+}
+
+.marker {
+    width: 200px;
+    height: 25px;
+    margin: 10px auto;
+}
+
+.one {
+    background-color: rgb(0, 0, 0);
+}
+
+.two {
+    background-color: rgb(0, 0, 0);
+}
+
+.three {
+    background-color: rgb(0, 0, 0);
+}
+
+/*
+The background color was actually applied, but since the marker div element is empty, it doesn't have any width or height by default.
+ The CSS rgb function accepts values, or arguments, for red, green, and blue, and produces a color:.
+rgb function uses the additive color model, where colors start as black and change as the values of red, green, and blue increase.
+ Secondary colors -->> yellow, cyan, magenta rg, gb , rb respectively.
+the color wheel.
+
+*/
