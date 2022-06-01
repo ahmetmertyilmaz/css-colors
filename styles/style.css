@@ -13,16 +13,54 @@ h1 {
     margin: 10px auto;
 }
 
-.one {
-    background-color: rgb(0, 0, 0);
+.cap {
+    width: 60px;
+    height: 25px;
 }
 
-.two {
-    background-color: rgb(0, 0, 0);
+.sleeve {
+    width: 110px;
+    height: 25px;
+    background-color: white;
+    /*opacity: 0.5= background: rgba(255, 255, 255, 50%)*/
+    background: rgba(255, 255, 255, 0.5);
+    /*border-left-width: 10px;
+    border-left-style: solid;
+    border-left-color: black;*/
+    border-left: 10px double rgba(0, 0, 0, 0.75);
 }
 
-.three {
-    background-color: rgb(0, 0, 0);
+.cap,
+.sleeve {
+    display: inline-block;
+}
+
+.red {
+    /*background-color: rgb(255, 0, 0);*/
+    background: linear-gradient(
+            /*180deg,*/
+            /*90deg is widthways,180deg is lenthways*/
+            rgb(122, 74, 14)
+            /*0%*/
+            /*75% is color-stop*/
+            , rgb(245, 62, 113)
+            /*50%*/
+            , rgb(162, 27, 27)
+            /*100%*/
+        );
+    box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+}
+
+.green {
+    background: linear-gradient(
+            /*180deg,*/
+            #55680D, #71F53E, #3B7E20CC);
+    box-shadow: 0 0 20px 0 green;
+}
+
+.blue {
+    background: linear-gradient(hsl(240, 100%, 50%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+    box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
 }
 
 /*
@@ -31,5 +69,16 @@ The background color was actually applied, but since the marker div element is e
 rgb function uses the additive color model, where colors start as black and change as the values of red, green, and blue increase.
  Secondary colors -->> yellow, cyan, magenta rg, gb , rb respectively.
 the color wheel.
-
+The HSL color model, or hue, saturation, and lightness, is another way to represent colors.
+The CSS hsl function accepts 3 values: a number from 0 to 360 for hue, a percentage from 0 to 100 for saturation, and a percentage from 0 to 100 for lightness.
+ The CSS linear-gradient function lets you control the direction of the transition along a line, and which colors are used.
+One thing to remember is that the linear-gradient function actually creates an image element, and is usually paired with the background property which can accept an image as a value.
+the linear-gradient function needs at least two color arguments to work.
+If no gradientDirection argument is provided to the linear-gradient function, it arranges colors from top to bottom, or along a 180 degree line, by default.
+The rgba function works just like the rgb function, but takes one more number from 0 to 1.0 for the alpha channel:
+border-left: 10px double black;     border-left: 10px solid black;.
+If a blurRadius value isn't included, it defaults to 0 and produces sharp edges. The higher the value of blurRadius, the greater the blurring effect is.
+But what if you wanted to expand the shadow out further? You can do that with the optional spreadRadius value:.
+box-shadow: offsetX offsetY blurRadius spreadRadius color;.
+#3B7E20CC -->> CC is for alpha channel (opacity).
 */
